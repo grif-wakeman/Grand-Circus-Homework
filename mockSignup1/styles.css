@@ -1,0 +1,120 @@
+* {
+    box-sizing:border-box;
+}
+
+html {
+    background-color: #fff;
+    color: rgb(102, 102, 102);
+    }
+
+body {
+    text-align: center;
+}
+
+.intro {
+    margin-bottom: px;
+}
+
+.intro p {
+    margin-top: -10px;
+    color: #8D8D98;
+    font-size: 0.80rem;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #3E3E3E;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.big-box {
+    margin: auto;
+    width: 750px;
+    height: 600px;
+    background-color: #E3F1F7;
+    border-radius: 10px;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.form-box {
+    width: 300px;
+    height: 350px;
+    padding: 20px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 5px 10px 2px rgba(110, 110, 110, 0.226);
+    
+
+}
+
+fieldset {
+    margin: auto;
+    width: 100%;
+    border: none;
+    
+}
+
+.form-field {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #DEDEDE;
+    background-color: #fff;
+}
+
+.forgot {
+    
+    cursor: pointer;
+    margin-top: -2px;
+}
+
+.submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: #3498DB;
+    color: #fff;
+    margin-top: 25px;
+    border: none;
+}
+
+fieldset p {
+    font-family: sans-serif;
+    font-size: 0.65rem;
+}
+
+a {
+    text-decoration: none
+}
+
+a:link {
+    color:#8D8D98
+}
+
+a:visited {
+    color: #8D8D98;
+}
+
+a:hover {
+    color: #3498DB;
+}
+
+a:active {
+    color: #91caf0;
+}
