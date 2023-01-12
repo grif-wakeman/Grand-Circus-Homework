@@ -1,0 +1,59 @@
+
+
+header {
+    background-color: #551A8B;
+    color: rgb(255, 255, 255, 0.8);
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 5px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    margin: 0 20px;
+}
+
+nav ul li {
+    text-decoration: none;
+    list-style: none;
+    font-weight: bold;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+.logo {
+    margin: 0 30px;
+}
+
+h1 {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: rgb(255, 255, 255, 0.8);
+}
+
+a:visited {
+    color: rgb(255, 255, 255, 0.8);
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.911);
+}
+
+a:active {
+    color: rgb(255, 255, 255, 0.8);
+}
