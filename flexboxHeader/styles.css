@@ -13,21 +13,23 @@ header {
 
 .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 }
 
 nav ul {
     display: flex;
-    margin: 0 20px;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 30px 10px;
 }
 
 nav ul li {
     text-decoration: none;
     list-style: none;
     font-weight: bold;
-    margin: 0 10px;
+    margin: 0 ;
     font-size: 0.9rem;
+    padding: 5px 0
 }
 
 .logo {
@@ -56,4 +58,68 @@ a:hover {
 
 a:active {
     color: rgb(255, 255, 255, 0.8);
+}
+
+@media only screen and (min-width:768px) {
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        margin: 0 20px;
+        padding: 0;
+    }
+    
+    nav ul li {
+        text-decoration: none;
+        list-style: none;
+        font-weight: bold;
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+    
+    .logo {
+        margin: 0 30px;
+    }
+    
+    h1 {
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    nav ul {
+        display: flex;
+        margin: 0 20px;
+        padding: 0;
+    }
+    
+    nav ul li {
+        text-decoration: none;
+        list-style: none;
+        font-weight: bold;
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+    
+    .logo {
+        margin: 0 30px;
+    }
+    
+    h1 {
+        font-size: 1rem;
+    }
 }
