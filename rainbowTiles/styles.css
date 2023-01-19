@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.rainbow-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    height: 100vh;
+}
+
+.tile {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+p {
+    color: white;
+    font-size: 50px;
+    text-shadow: 2px 2px 1px black;
+}
+
+.red {
+    background-color: red;
+    }
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.purple {
+    background-color: purple;
+}
+
+@media only screen and (min-width: 600px) {
+    .rainbow-tiles {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        height: 100vh;
+    }
+
+    .tile {
+        width: 33.33%;
+        height: 50%;
+}
+}
