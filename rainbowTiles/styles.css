@@ -27,27 +27,27 @@ p {
 }
 
 .red {
-    background-color: red;
+    background-color: rgb(161, 33, 33);
     }
 
 .orange {
-    background-color: orange;
+    background-color: rgb(231, 157, 18);
 }
 
 .yellow {
-    background-color: yellow;
+    background-color: rgb(201, 201, 38);
 }
 
 .green {
-    background-color: green;
+    background-color: rgb(49, 109, 49);
 }
 
 .blue {
-    background-color: blue;
+    background-color: rgb(62, 62, 182);
 }
 
 .purple {
-    background-color: purple;
+    background-color: rgb(128, 58, 128);
 }
 
 @media only screen and (min-width: 600px) {
