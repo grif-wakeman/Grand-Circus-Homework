@@ -150,3 +150,46 @@ console.log(filterPassing(submissions));
 console.log("***Return 90+ scores only***");
 
 console.log(filter90AndAbove(submissions));
+
+
+
+console.log("***Extended Challenges***");
+
+// Extended challenges
+
+function createRange(start, end) {
+    let rangeArray = [];
+
+    if (start < end) {
+        for (let i = start; i <= end; i++) {
+        rangeArray.push(i);
+    }
+    } else {
+        for (let j = start; j >= end; j--) {
+         rangeArray.push(j);
+    }
+    }
+    
+    return rangeArray;
+}
+
+console.log("***Create a range of numbers in an array with start and end parameters***");
+
+console.log(createRange(1, 25));
+
+
+
+function countElements(array) {
+    let countArray = array;
+    console.log(countArray);
+    
+    const occurrences = countArray.reduce(function (acc, curr) {
+        return acc[curr] ? ++acc[curr] : acc[curr] = 1, acc
+      }, {});
+      
+      console.log(occurrences)
+}
+
+console.log("***Count how many instances a string appears in an array***");
+
+countElements(["a", "b", "a", "c", "a", "b", "c", "c", "a", "b", "c", "b", "a", "c", "b", "a", "b", "a"]);
