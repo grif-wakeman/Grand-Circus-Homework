@@ -65,12 +65,24 @@ function findSubmissionByName(array, name) {
     return result;
 }
 
-function findLowestScore(array) {
+/* function findLowestScore(array) {
     const min = Math.min(...array.map(array => array.score));
     array.forEach(element => {
         console.log(element);
     });
     return min;
+} */
+
+function findLowestScore(array) {
+
+    let lowestScore = array[0];
+
+    array.forEach(submission => {
+        if (submission.score < lowestScore.score) {
+            lowestScore = submission
+        }
+    })
+    return lowestScore;
 }
 
 function findAverageScore(array) {
