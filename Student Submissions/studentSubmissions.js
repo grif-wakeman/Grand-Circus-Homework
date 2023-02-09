@@ -45,7 +45,7 @@ function deleteSubmissionByIndex(array, index) {
 }
 
 function deleteSubmissionByName(array, name) {
-    const index = array.findIndex(array => array.name === name);
+    const index = array.findIndex(element => element.name === name);
     array.splice(index, 1)
 }
 
@@ -61,7 +61,7 @@ function editSubmission(array, index, score) {
 }
 
 function findSubmissionByName(array, name) {
-    const result = array.find(array => array.name === name);
+    const result = array.find(element => element.name === name);
     return result;
 }
 
@@ -92,17 +92,18 @@ function findAverageScore(array) {
     for (const element of array ) {
         total = total + element.score;
     }
+    console.log(total);
     let average = total / array.length;
     return average;
 }
 
 function filterPassing(array) {
-    const newArr = array.filter(array => array.passed === true)
+    const newArr = array.filter(element => element.passed === true)
     return newArr;
 }
 
 function filter90AndAbove(array) {
-    const pass90 = array.filter(array => array.score >= 90)
+    const pass90 = array.filter(element => element.score >= 90)
     return pass90;
 }
 
@@ -150,7 +151,6 @@ console.log(findLowestScore(submissions));
 //Find average score
 console.log("***Find average score***");
 
-console.log(submissions);
 console.log(findAverageScore(submissions));
 
 //Return pass only
