@@ -6,7 +6,7 @@ function main() {
     shrinkMe.classList.remove("big");
 
     const lis = document.querySelectorAll("li");
-    
+
     for (let li of lis) {
         console.log(li.innerText);
     };
