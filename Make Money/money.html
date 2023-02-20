@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Money</title>
+    <link rel="stylesheet" href="./money.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <form onsubmit="return false" id="moneyForm">
+        <fieldset>
+            <div class="how-many">
+                <label for="input-box1">How Many?</label>
+                <input type="text" class="input-box1" name="input-box1" id="input-box1">
+            </div>
+            <div class="which-coin">
+                <p>Which Coin?</p>
+                <div id="pick-coin">
+                    <label for="quarter">Quarter</label>
+                    <input type="radio" id="quarter" name="coin" value="Quarter">
+                    <label for="nickel">Nickel</label>
+                    <input type="radio" id="nickel" name="coin" value="Nickel">
+                    <label for="dime">Dime</label>
+                    <input type="radio" id="dime" name="coin" value="Dime">
+                    <label for="penny">Penny</label>
+                    <input type="radio" id="penny" name="coin" value="Penny">
+                </div>
+            </div>
+            <div>
+                <input type="submit" id="submitBtn" class="submit" value="Make Money!">
+            </div>
+        </fieldset>
+        <div class="total">
+            <p id="total-value">Total: 0</p>
+        </div>
+    </form>
+    <section id="money">
+    </section>
+    <script src="./money.js"></script>
+</body>
+</html>

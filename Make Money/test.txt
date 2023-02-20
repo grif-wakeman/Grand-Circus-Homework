@@ -1,0 +1,29 @@
+<div class="quarter-div">
+            <div class="coin25">
+                <h2>25</h2>
+            </div>
+        </div>
+        <div class="nickel-div">
+            <div class="coin5">
+                <h3>5</h3>
+            </div>
+        </div>
+        <div class="penny-div">
+            <div class="coin1">
+                <h4>1</h4>
+            </div>
+        </div>
+        <div class="dime-div">
+            <div class="coin10">
+                <h5>10</h4>
+            </div>
+        </div>
+
+
+
+
+
+
+        const quarter = document.createElement("img");
+            quarter.setAttribute("src", "./images/pngfind.com-quarter-png-174755.png");
+            quarter.classList.add("coin25");
