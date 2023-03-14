@@ -18,8 +18,8 @@
         let currPost, markup = ``
         const posts = data.data.children;
 
-        for (let i = 1; i < 10; i++) {
-            currPost = posts[i].data;   // a single post object
+        for (let i = 1; i <= 10; i++) {
+            currPost = posts[i].data;
             markup += `
                 <a class="post" href="https://www.reddit.com/${currPost.permalink}">
                 <div class="author"> Posted by ${currPost.author} </div>
@@ -37,7 +37,7 @@
     }
 
     searchBtn.addEventListener("click", (event) => {
-        getPosts().then(postData => { });
+        getPosts().then(postData => {});
     })
 
 

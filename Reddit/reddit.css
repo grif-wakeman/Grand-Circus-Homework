@@ -6,13 +6,34 @@
     outline: none;
   }
 
+  #search-container {
+    text-align: center;
+  }
+
+  input {
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 50px;
+  }
+
+  #search-btn {
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  label {
+    font-style: italic;
+    font-size: .8rem;
+  }
+
   .post-container {
     width: 95%;
     height: auto;
     padding: 5px;
     margin: 15px auto;
     border-radius: 5px;
-    background-color: #eee;
   }
 
   h3 { text-align: center; }
@@ -22,11 +43,11 @@
     height: auto;
     display: block;
     padding: 10px;
-    background-color: #3e3e40;
-    color: #ededed;
+    background-color: #cccccc;
+    color: #373737;
     margin: 10px auto;
     border-radius: 5px;
-    box-shadow: 3px 3px 5px #ddd;
+    box-shadow: 0px 0px 5px 1px #1717175e;
   }
 
   .post > * {
