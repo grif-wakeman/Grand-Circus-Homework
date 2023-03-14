@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    word-break: break-all;
+    outline: none;
+  }
+
+  .post-container {
+    width: 95%;
+    height: auto;
+    padding: 5px;
+    margin: 15px auto;
+    border-radius: 5px;
+    background-color: #eee;
+  }
+
+  h3 { text-align: center; }
+
+  .post {
+    width: 25%;
+    height: auto;
+    display: block;
+    padding: 10px;
+    background-color: #3e3e40;
+    color: #ededed;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #ddd;
+  }
+
+  .post > * {
+    display: block;
+    margin: 5px;
+    font-size: 16px;
+  }
+
+  .author {
+    font-style: italic;
+    font-size: 12px;
+  }
+  
+  .title { font-weight: bold; }
+  
+  .content span { color: lightblue; }
+
+  .image {
+    height: auto;
+    width: 300px;
+    margin: auto;
+  }
