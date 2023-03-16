@@ -28,13 +28,13 @@
     font-size: .8rem;
   }
 
-  .post-container {
+  /* .post-container {
     width: 95%;
     height: auto;
     padding: 5px;
     margin: 15px auto;
     border-radius: 5px;
-  }
+  } */
 
   h3 { text-align: center; }
 

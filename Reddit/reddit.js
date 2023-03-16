@@ -20,24 +20,32 @@
 
         for (let i = 1; i <= 10; i++) {
             currPost = posts[i].data;
+
             markup += `
                 <a class="post" href="https://www.reddit.com/${currPost.permalink}">
                 <div class="author"> Posted by ${currPost.author} </div>
                     <div class="title"> ${currPost.title} </div>
                     <img src=${currPost.url} class="image"></img>
-                    <div class="content"> 
-                       ${currPost.selftext} 
-                    </div>
+                    
                    
                 </a>
              `;
+
         }
         container.insertAdjacentHTML('afterbegin', markup);
 
     }
 
+    function removePosts() {
+        while (container.firstChild) {
+            container.removeChild(container.firstChild);
+        }
+    }
+
     searchBtn.addEventListener("click", (event) => {
-        getPosts().then(postData => {});
+        removePosts();
+        getPosts();
+
     })
 
 
