@@ -1,0 +1,17 @@
+{
+  "name": "pig-latin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest --watchAll --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "promptly": "^3.2.0"
+  }
+}
