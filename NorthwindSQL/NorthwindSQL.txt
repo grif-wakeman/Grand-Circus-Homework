@@ -17,7 +17,7 @@ VALUES('XXXXX', 'Grand Circus', 'Grif Wakeman', 'Student', '123 Main Street', 'D
 
 UPDATE orders
 SET ship_region = 'EuroZone'
-WHERE ship_region = 'France';
+WHERE ship_country = 'France';
 
 DELETE FROM order_details WHERE quantity='1';
 
