@@ -1,0 +1,82 @@
+CREATE TABLE book (
+	id SERIAL PRIMARY KEY,
+	title VARCHAR(60),
+	author VARCHAR(60),
+	checked_out_by INT
+   );
+
+CREATE TABLE member (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(40),
+	card_number CHAR(10)
+   );
+
+INSERT INTO member (name, card_number)
+VALUES
+	(
+		'Annabelle Aster',
+		'772-93-110'
+	),
+	(
+		'Boris Berceli',
+		'000-00-000'
+	),
+	(
+		'Carter Corbin',
+		'282-09-382'
+	);
+
+INSERT INTO book (title, author, checked_out_by)
+VALUES
+	(
+		'In Search of Lost Time',
+		'Marcel Proust',
+		1
+	),
+	(
+		'Ulysses',
+		'James Joyce',
+		1
+	),
+	(
+		'Don Quixote',
+		'Miguel de Caervantes',
+		3
+	),
+	(
+		'Moby Dick',
+		'Herman Melville',
+		null
+	);
+
+UPDATE member
+SET card_number = '357-15-964'
+WHERE id = 2;
+
+DELETE FROM member
+WHERE id = 2;
+
+SELECT * FROM member
+WHERE card_number = '772-93-110';
+
+SELECT * FROM book
+ORDER BY title;
+
+UPDATE book
+SET checked_out_by = 1
+WHERE title = 'Moby Dick';
+
+UPDATE book
+SET checked_out_by = null
+WHERE title = 'Ulysses';
+
+SELECT * FROM book
+LEFT JOIN member ON book.checked_out_by = member.id;
+
+SELECT * FROM book
+JOIN member ON book.checked_out_by = member.id
+WHERE member.name = 'Annabelle Aster';
+
+SELECT member.name, member.card_number FROM book
+JOIN member ON book.checked_out_by = member.id
+WHERE book.author = 'Herman Melville';
