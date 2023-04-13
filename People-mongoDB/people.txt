@@ -23,3 +23,9 @@ db.people.find({ age: {$lt: 30}}, {first_name: true, last_name: true, _id: false
 db.people.find({state: "Montana"}, {age: false})
 
 db.people.find({email: /edu$/}, {email: true, _id: false})
+
+db.people.find({children: {$elemMatch: {age: {$lt: 4}}}})
+
+db.people.find({children: {$size: 0}})
+
+db.people.find({'children.0': {$exists: true}})
