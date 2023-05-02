@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mainContent {
+    padding: 10px 20px;
+}
+
+p {
+    font-weight: bold;
+}
+
+button {
+    background-color: #0e3c7e;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+button:active {
+    background-color: #1e60a9;
+}
+
+h1, h2, h3 {
+    font-family: "Caveat", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+    .mainContent {
+        display: flex;
+        justify-content: center;
+    }
+
+}

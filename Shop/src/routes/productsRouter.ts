@@ -9,14 +9,27 @@ export const productsRouter = express.Router();
 
 
 
-productsRouter.get('/products/price', async (req, res) => {
-    const maxPrice = parseInt(req.query.maxPrice as string);
-    const client = await getClient(); //connects to server
-    const results = await client.db()
-        .collection<Product>('products').find({ price: { $lte: maxPrice}}).toArray();
-
-    res.json(results); //send json results
-});
+productsRouter.get("/products", async (req, res) => {
+    let includes = req.query.includes;
+    let maxPrice = parseInt(req.query.maxPrice as string);
+    let limit = parseInt(req.query.limit as string);
+    let query: any = {
+      $and: [
+    
+          (maxPrice ? { price: { $lte: maxPrice } } : {}),
+          (includes ? { name: { $regex: `${includes}`, $options: "xi" }} : {}),
+        // new RegExp(`${includes}`, "i")
+      ]
+    }
+    const client = await getClient();
+    const cursor = await client.db().collection<Product>("products").find(query)
+      .sort({price: -1});
+    if (limit) {
+      cursor.limit(limit);
+    }
+    const result = await cursor.toArray();
+    res.status(200).json(result);
+  });
 
 productsRouter.get('/products/limit', async (req, res) => {
     const limit = parseInt(req.query.limit as string);

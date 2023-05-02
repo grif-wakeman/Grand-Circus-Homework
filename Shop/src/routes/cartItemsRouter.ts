@@ -1,4 +1,4 @@
-import express from "express";
+import express, { json } from "express";
 import Product from "../models/Product";
 import { getClient } from "../db";
 import { ObjectId } from "mongodb";
@@ -6,11 +6,14 @@ import CartItem from "../models/CartItem";
 
 export const cartItemsRouter = express.Router();
 
-cartItemsRouter.get('/cartItems', async (req, res) => {
-
+cartItemsRouter.get('/cartItems:userId', async (req, res) => {
+    const userId: any = req.params.userId;
     const client = await getClient(); //connects to server
     const results = await client.db()
-        .collection<CartItem>('cartItems').find().toArray();
+        .collection<CartItem>('cartItems').find({ userId: userId}).toArray();
+        console.log(results);
+        
+    
 
     res.json(results); //send json results
 });
