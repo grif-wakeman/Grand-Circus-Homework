@@ -47,12 +47,12 @@
     border: 2px solid #fff;
 }
 
-.support button:focus {
+.support button:disabled {
         background-color: gray;
         user-select: none;
 }
 
-.themeBox button:focus {
+.themeBox button:disabled {
     background-color: gray;
         user-select: none;
 }

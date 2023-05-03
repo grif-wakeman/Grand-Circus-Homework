@@ -7,11 +7,45 @@ import "./AdDesigner.css"
 export function AdDesigner() {
 
     const [adFlavor, setAdFlavor] = useState("Oreo Smash");
-    const [darkMode, setDarkMode] = useState(false);
     const [fontSizeAd, setFontSizeAd] = useState(30);
-    const [btnDisabled, setBtnDisabled] = useState(false);
-    const styles = {fontSize: fontSizeAd + "px"};
-    
+    const [oreoDisable, setOreoDisable] = useState(true);
+    const [cherryDisable, setCherryDisable] = useState(false);
+    const [supermanDisable, setSupermanDisable] = useState(false);
+    const [lightMode, setLightMode] = useState(true);
+    const [darkMode, setDarkMode] = useState(false);
+    const styles = { fontSize: fontSizeAd + "px" };
+
+    function oreoBtn() {
+        setAdFlavor("Oreo Smash")
+        setOreoDisable(true);
+        setCherryDisable(false);
+        setSupermanDisable(false);
+    }
+
+
+    function cherryBtn() {
+        setAdFlavor("Cherry Garcia")
+        setCherryDisable(true);
+        setOreoDisable(false);
+        setSupermanDisable(false);
+    }
+
+    function supermanBtn() {
+        setAdFlavor("Superman")
+        setSupermanDisable(true);
+        setOreoDisable(false);
+        setCherryDisable(false);
+    }
+
+    function lightBtn() {
+        setLightMode(true);
+        setDarkMode(false)
+    }
+    function darkBtn() {
+        setLightMode(false);
+        setDarkMode(true)
+    }
+
 
     return (
         <div className="AdDesigner">
@@ -22,20 +56,20 @@ export function AdDesigner() {
             </div>
             <div className="support">
                 <p>What To Support</p>
-                <button onClick={() => setAdFlavor("Oreo Smash")}>Oreo Smash</button>
-                <button onClick={() => setAdFlavor("Cherry Garcia")}>Cherry Garcia</button>
-                <button onClick={() => setAdFlavor("Superman")}>Superman</button>
+                <button disabled={oreoDisable} onClick={() => oreoBtn()}>Oreo Smash</button>
+                <button disabled={cherryDisable} onClick={() =>  cherryBtn()}>Cherry Garcia</button>
+                <button disabled={supermanDisable} onClick={() => supermanBtn()}>Superman</button>
             </div>
             <div className="themeBox">
                 <p>Color Theme</p>
-                <button onClick={() => setDarkMode(false)}>Light</button>
-                <button onClick={() => setDarkMode(true)}>Dark</button>
+                <button disabled={lightMode} onClick={() => lightBtn()}>Light</button>
+                <button disabled={darkMode} onClick={() => darkBtn()}>Dark</button>
             </div>
             <div className="fontSizeAd">
                 <p>Font Size</p>
-                <button onClick={() => fontSizeAd !== 20 ? setFontSizeAd(prevCount => prevCount - 1): setFontSizeAd(20)}>Down</button>
+                <button onClick={() => fontSizeAd !== 20 ? setFontSizeAd(prevCount => prevCount - 1) : setFontSizeAd(20)}>Down</button>
                 <span>{fontSizeAd}</span>
-                <button onClick={() => fontSizeAd !== 50 ? setFontSizeAd(prevCount => prevCount + 1): setFontSizeAd(50)}>Up</button>
+                <button onClick={() => fontSizeAd !== 50 ? setFontSizeAd(prevCount => prevCount + 1) : setFontSizeAd(50)}>Up</button>
             </div>
         </div>
     )
