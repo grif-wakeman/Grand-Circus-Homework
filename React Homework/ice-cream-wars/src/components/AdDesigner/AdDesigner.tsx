@@ -8,43 +8,10 @@ export function AdDesigner() {
 
     const [adFlavor, setAdFlavor] = useState("Oreo Smash");
     const [fontSizeAd, setFontSizeAd] = useState(30);
-    const [oreoDisable, setOreoDisable] = useState(true);
-    const [cherryDisable, setCherryDisable] = useState(false);
-    const [supermanDisable, setSupermanDisable] = useState(false);
-    const [lightMode, setLightMode] = useState(true);
     const [darkMode, setDarkMode] = useState(false);
     const styles = { fontSize: fontSizeAd + "px" };
 
-    function oreoBtn() {
-        setAdFlavor("Oreo Smash")
-        setOreoDisable(true);
-        setCherryDisable(false);
-        setSupermanDisable(false);
-    }
 
-
-    function cherryBtn() {
-        setAdFlavor("Cherry Garcia")
-        setCherryDisable(true);
-        setOreoDisable(false);
-        setSupermanDisable(false);
-    }
-
-    function supermanBtn() {
-        setAdFlavor("Superman")
-        setSupermanDisable(true);
-        setOreoDisable(false);
-        setCherryDisable(false);
-    }
-
-    function lightBtn() {
-        setLightMode(true);
-        setDarkMode(false)
-    }
-    function darkBtn() {
-        setLightMode(false);
-        setDarkMode(true)
-    }
 
 
     return (
@@ -56,14 +23,14 @@ export function AdDesigner() {
             </div>
             <div className="support">
                 <p>What To Support</p>
-                <button disabled={oreoDisable} onClick={() => oreoBtn()}>Oreo Smash</button>
-                <button disabled={cherryDisable} onClick={() =>  cherryBtn()}>Cherry Garcia</button>
-                <button disabled={supermanDisable} onClick={() => supermanBtn()}>Superman</button>
+                <button disabled={adFlavor === "Oreo Smash"} onClick={() => setAdFlavor("Oreo Smash")}>Oreo Smash</button>
+                <button disabled={adFlavor === "Cherry Garcia"} onClick={() =>  setAdFlavor("Cherry Garcia")}>Cherry Garcia</button>
+                <button disabled={adFlavor === "Superman"} onClick={() => setAdFlavor("Superman")}>Superman</button>
             </div>
             <div className="themeBox">
                 <p>Color Theme</p>
-                <button disabled={lightMode} onClick={() => lightBtn()}>Light</button>
-                <button disabled={darkMode} onClick={() => darkBtn()}>Dark</button>
+                <button disabled={darkMode === false } onClick={() => setDarkMode(false)}>Light</button>
+                <button disabled={darkMode === true} onClick={() => setDarkMode(true)}>Dark</button>
             </div>
             <div className="fontSizeAd">
                 <p>Font Size</p>

@@ -48,13 +48,13 @@
 }
 
 .support button:disabled {
-        background-color: gray;
-        user-select: none;
+    background-color: gray;
+    cursor: default;
 }
 
 .themeBox button:disabled {
     background-color: gray;
-        user-select: none;
+    cursor: default;
 }
 
 @media only screen and (min-width: 768px) {
