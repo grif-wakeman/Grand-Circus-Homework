@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./AdDesigner.css"
+import { Ad } from "../Ad/Ad";
 
 
 
@@ -17,10 +18,7 @@ export function AdDesigner() {
     return (
         <div className="AdDesigner">
             <h2>Ad Designer</h2>
-            <div className={darkMode ? "designer-box darkMode" : "designer-box lightMode"}>
-                <p>Vote For</p>
-                <h3 style={styles}>{adFlavor}</h3>
-            </div>
+            <Ad flavor={adFlavor} fontSize={fontSizeAd} darkTheme={darkMode} />
             <div className="support">
                 <p>What To Support</p>
                 <button disabled={adFlavor === "Oreo Smash"} onClick={() => setAdFlavor("Oreo Smash")}>Oreo Smash</button>

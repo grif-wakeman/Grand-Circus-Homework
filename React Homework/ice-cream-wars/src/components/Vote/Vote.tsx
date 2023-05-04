@@ -12,23 +12,6 @@ export function Vote() {
     const cherryStyle = {width: Math.round(cherry / totalVotes * 100) + "%"}
     const supermanStyle = {width: Math.round(superman / totalVotes * 100) + "%"}
 
-
-    let voteArray: IceCream[] =
-        [
-            {
-                flavor: "Oreo Smash",
-                votes: oreo
-            },
-            {
-                flavor: "Cherry Garcia",
-                votes: cherry
-            },
-            {
-                flavor: "Superman",
-                votes: superman
-            }
-        ];
-
     return (
         <div className="Vote">
             <h2>Vote Here</h2>
