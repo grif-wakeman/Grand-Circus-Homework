@@ -17,8 +17,8 @@ export function ArraysEx() {
         setColors(prev => [...prev, color]);
     }
 
-    const handleDelete = (index: number, e: any) => {
-        setPets(pets.filter((pet, i) => i !== index));
+    const handleDelete = (id: number) => {
+        setPets(pets.filter(pet  => pet.id !== id));
         console.log(pets);
 
     };
@@ -47,7 +47,7 @@ export function ArraysEx() {
                         <tr key={pet.id}>
                             <td>{pet.name}</td>
                             <td>{pet.type}</td>
-                            <td><button onClick={(e) => handleDelete(i, e)}>Delete</button></td>
+                            <td><button onClick={(e) => handleDelete(pet.id)}>Delete</button></td>
                         </tr>)}
                 </tbody>
             </table>
