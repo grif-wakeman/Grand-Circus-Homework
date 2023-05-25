@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 export function Home() {
 
     const [donuts, setDonuts] = useState<any[]>();
-    const [donutId, setDonutId] = useState(0);
     
 
     useEffect(() => {

@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 export function Donut() {
 
   const [donut, setDonut] = useState<any>({})
-  const [extras, setExtras] = useState<any[]>()
 
   const id: number = parseInt(useParams().id!)
 
@@ -16,26 +15,23 @@ export function Donut() {
   useEffect(() => {
     donutDetails(id).then(data => {
       setDonut(data)
-      setExtras(data.extras)
-      console.log(data.name);
-
     })
-  }, []);
+  }, [id]);
 
   return (
     <div>
-      <Link to="/home">Back to List</Link>
+      <Link to="/">Back to List</Link>
       <h1>Donut</h1>
-      <p><strong>Name:</strong> {donut.name}</p>
-      <p><strong>Calories:</strong> {donut.calories}</p>
+      <p><strong>Name:</strong> {donut?.name}</p>
+      <p><strong>Calories:</strong> {donut?.calories}</p>
       <p><strong>Extras:</strong></p>
       <ul>
         
         {
-          extras?.map(e => <li>{e}</li>)
+          donut?.extras?.map((extra: any) => <li>{extra}</li>)
         }
       </ul>
-      <img src={donut.photo} width="400px"/>
+      <img src={donut?.photo} width="400px" alt={`${donut?.name} donut`}/>
 
     </div>
   )
